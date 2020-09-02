@@ -16,6 +16,8 @@
 
   - name: building docker image
     command: docker build -t simple-devops-image .
+    args:
+      chdir: heloo-world
    
   - name: creating docker image
     command: docker run -d --name simple-devops-container -p 8888:8080 simple-devops-image
